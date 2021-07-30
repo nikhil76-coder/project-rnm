@@ -108,7 +108,14 @@ const MyDrawer = withStyles(styles)(
           >
             <ListItemText>Home</ListItemText>
           </ListItem>
-
+          <ListItem
+            button
+            component={Link}
+            to=""
+            onClick={onItemClick("Document Center")}
+          >
+            <ListItemText>Documents</ListItemText>
+          </ListItem>
           
         
         </List>

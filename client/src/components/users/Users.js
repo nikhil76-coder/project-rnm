@@ -414,7 +414,17 @@ const Users = () => {
 
 
   return (
+    <div>
+     <div style = {{paddingTop: 40, float: 'right',paddingRight:20}}>
+      <Button variant="contained" color="primary" onClick={handleOpen}>
+       Add Users
+       </Button>
+      </div>
+    
+   
     <div style={{ padding: 16, margin: 'auto', paddingTop: 100 }}>
+      
+      <ModalDialog open={open} handleClose={handleClose} />
       <MaterialTable
         title='Users'
         columns={columns}
@@ -422,12 +432,9 @@ const Users = () => {
         options={{
           filtering: true // false to disble column specific filter 
         }} />
-      <br />
-      <Button variant="contained" color="primary" onClick={handleOpen}>
-        Add Users
-      </Button>
-
-      <ModalDialog open={open} handleClose={handleClose} />
+      
+     
+    </div>
     </div>
   );
 };

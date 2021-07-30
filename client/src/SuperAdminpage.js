@@ -46,11 +46,11 @@ const styles = theme => ({
 
 const MyToolbar = withStyles(styles)(({ classes, title, onMenuClick }) => (
   <Fragment>
-    <AppBar className={classes.aboveDrawer}>
+    <AppBar  color="A9A9A9" className={classes.aboveDrawer}>
       <Toolbar>
         <IconButton
           className={classes.menuButton}
-          color="inherit"
+          color="A9A9A9"
           aria-label="Menu"
           onClick={onMenuClick}
         >

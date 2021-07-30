@@ -258,6 +258,8 @@ import Users from "./components/users/Users";
 
 
 import Roles from "./components/roles/Roles";
+import Docform from './Pages/Userdocucemntpage'
+import Home from './Pages/home/Home';
 const drawerWidth = 240;
 const history = createBrowserHistory();
 
@@ -351,12 +353,29 @@ const MyDrawer = withStyles(styles)(
           >
             <ListItemText>Roles</ListItemText>
           </ListItem>
-        
+          <ListItem
+            button
+            component={Link}
+            to="/Docform"
+            onClick={onItemClick("Document center")}
+          >
+            <ListItemText>Document center</ListItemText>
+          </ListItem>
+          <ListItem
+            button
+            component={Link}
+            to="/Home"
+            onClick={onItemClick("Dashboard")}
+          >
+            <ListItemText>Dashboard</ListItemText>
+          </ListItem>
         </List>
       </Drawer>
       <main className={classes.content}>
         <Route exact path="/users" component={Users} />
         <Route path="/roles" component={Roles} />
+        <Route path="/Docform" component={Docform} />
+        <Route path="/Home" component={Home} />
       </main>
     </Router>
   )
